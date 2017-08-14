@@ -1,0 +1,23 @@
+$open-sans:Open Sans, Arial, Sans-serif; 
+ .circuits{ 
+   background: #fff; 
+   animation: FadeIn 1s linear; 
+   animation-fill-mode: both; 
+    &:nth-child(){ 
+     margin: 20px 10px; 
+   } 
+   p{ 
+     color: #858585; 
+     font:400 1.125em $open-sans ;
+        img{
+       display: block;
+       padding: 0 0 10px;
+       max-width: 100%;
+       height: 100%;
+       max-height: 145px;
+    }
+   } 
+ }
+  @for $i from 0 to 98 { 
+  .circuits:nth-child(#{$i}) { animation-delay: $i * 0.35s; } 
+} 

@@ -1,0 +1,7 @@
+ 
+     <div class="col-xs-12 col-sm-6 col-md-3 constructors" *ngFor="let constructor of constructors | slice:0:98">
+        <p><img class="constructor-photos" src="../assets/constructors/{{constructor.constructorId}}.png" alt="{{constructor.constructorId}}"/></p>  
+        <p>Constructor: {{constructor.name}}</p> 
+        <p>Nationality: {{constructor.nationality}}</p> 
+        <p><a href="{{constructor.url}}" title="{{constructor.url}}"></a></p>
+     </div> 

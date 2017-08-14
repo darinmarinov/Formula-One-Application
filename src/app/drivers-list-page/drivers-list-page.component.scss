@@ -1,0 +1,38 @@
+$open-sans:Open Sans, Arial, Sans-serif; 
+ .drivers{ 
+   background: #fff; 
+   animation: FadeIn 1s linear; 
+   animation-fill-mode: both; 
+    &:nth-child(){ 
+     margin: 20px 10px; 
+   } 
+   p{ 
+     color: #858585; 
+     font:400 1.125em $open-sans 
+   }
+   p:first-child{
+      border-bottom: 2px solid #b49a9a;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+   }
+   p a{
+     margin-left: 10px;
+     color: #46b7ff;
+     font:400 1.125em $open-sans;
+     text-decoration: none;
+   } 
+   .drivers-photos{
+     border-radius: 50%;
+     display: inline-block;
+     vertical-align: middle;
+    }  
+    .flags-photos{
+      border-radius: 0;
+      margin-left: 10px;
+      @extend .drivers-photos;
+    }
+ } 
+ 
+ @for $i from 0 to 98 { 
+  .drivers:nth-child(#{$i}) { animation-delay: $i * 0.35s; } 
+} 

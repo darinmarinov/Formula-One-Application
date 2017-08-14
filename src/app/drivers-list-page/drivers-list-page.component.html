@@ -1,0 +1,13 @@
+ 
+     <div class="col-xs-12 col-sm-6 col-md-3 drivers" *ngFor="let driver of drivers | slice:0:98"> 
+        <p><img class="drivers-photos" src="../assets/drivers/{{driver.Driver.familyName}}.png" alt="{{driver.Driver.familyName}}"/>
+          <app-driver>{{driver.Driver.familyName}}</app-driver>  
+       <a  [routerLink]="driver-list/driver-name" (click)="onClick($event)" title="Visit for more info"></a>
+        </p> 
+        <p>Nationality:<img class="flags-photos" src="../assets/flags/{{driver.Driver.nationality}}.png" alt="{{driver.Driver.nationality}}"/></p> 
+        <p>Position: {{driver.position}}</p> 
+        <p>Points: {{driver.points}}</p> 
+        <p>Wins: {{driver.wins}}</p> 
+     </div> 
+
+<router-outlet></router-outlet>

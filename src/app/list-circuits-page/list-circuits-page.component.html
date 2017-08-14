@@ -1,0 +1,5 @@
+         <div class="col-xs-12 col-sm-6 col-md-3 circuits" *ngFor="let circuit of circuits">
+                    <p><img src="../assets/circuits/{{circuit.circuitId}}.png" alt="{{circuit.circuitId}}"/></p>
+                    <p>Name: {{circuit.circuitName}}</p>
+                    <p>Locality: {{circuit.Location.locality}} {{circuit.Location.country}}</p>
+         </div>

@@ -1,0 +1,49 @@
+$open-sans:Open Sans, Arial, Sans-serif; 
+.constructors{ 
+   background: #fff; 
+   animation: FadeIn 1s linear; 
+   animation-fill-mode: both; 
+    &:nth-child(){ 
+     margin: 20px 10px; 
+   } 
+   p{ 
+     color: #858585; 
+     font:400 1.125em $open-sans 
+   }
+   p img{
+       display: block;
+       padding: 0 0 10px;
+       max-width: 100%;
+       height: 100%;
+       max-height: 145px;
+   }
+   p a{
+     position: relative;
+     float: right;
+     right: 6px;
+     top: -45px;
+     &::after {
+       position: absolute;
+       display: inline-block; 
+       padding-left:2px; 
+       color: #000;
+       font-size: 15px;
+       content: "\00bb"; 
+     }
+   }
+}
+
+ @for $i from 0 to 98 { 
+  .constructors:nth-child(#{$i}) { animation-delay: $i * 0.35s; } 
+} 
+
+@media(min-width:700px){
+  .constructors {
+    p img{max-height: 205px}
+    p a{
+      top:-60px;
+      right: 16px;
+      &::after {font-size: 30px}
+    }
+    }
+}
